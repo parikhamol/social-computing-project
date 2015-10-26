@@ -1,5 +1,6 @@
 # social-computing-project
 This is the code for the social computing project at Gatech
+
 1.	Need to write a code that combines all the posts file in one file and remove duplicates
 	-	this can be then used as the primary post.csv for all subsequent code
 	-	also create a combined post file with the word counts for code that uses number of words
