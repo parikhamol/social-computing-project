@@ -14,6 +14,8 @@ import numpy as np
 def main(in_filename):
     doc = []
     str = "post";
+    
+    #this is done because of the different formats of the post and comment files
     if sys.argv[1].find(str) >=0:
         colnames = ['postid' , 'time', 'user','no1','no2','no3','no4' ,'title','post', 'now']
         posts = pandas.read_csv(sys.argv[1] ,names=colnames)
@@ -24,19 +26,11 @@ def main(in_filename):
         comments = pandas.read_csv(sys.argv[1],names=colnames)
         num = comments.now.tolist()
         doc = comments.comment.tolist()
-    '''
-    if isinstance(in_filename, basestring):
-        with open(in_filename,'r') as posts:
-            for line in posts:
-                post = line.split('\t')[-1]
-                doc.append(post.decode('utf-8','ignore'))
-    else:
-        doc = in_filename
-    '''
+
     index =0
     all_postive_liwc_measures = []
     all_negative_liwc_measures = []
-    print ("Getting LIWC measures for posts")
+    print "Getting LIWC measures for " , sys.argv[1]
     liwc_lexicon = LIWCMeta.extract_liwc_features()
     for item in doc:
         if type(item) == float and np.isnan(item):
