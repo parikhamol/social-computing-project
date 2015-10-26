@@ -2,9 +2,11 @@
 This is the code for the social computing project at Gatech
 1.	Need to write a code that combines all the posts file in one file and remove duplicates
 	⁃	this can be then used as the primary post.csv for all subsequent code
+	-	also create a combined post file with the word counts for code that uses number of words
 	
 2.	Need to write a code that combines all the comments files in one file and remove duplicates
 	⁃	this can be then used as the primary comments.csv for all subsequent code
+	-	Also create a combined comment file with the word counts for code that uses number of words
 	
 3.	Right now the steps from 4 to 8 need to be run separately for each posts and comments file that we have
 
@@ -32,3 +34,10 @@ This is the code for the social computing project at Gatech
 9.	Run timeline_posts.py 
 	⁃	This read post.csv and post1.csv (In the future will use the combined post.csv file)
 	⁃	Generates a timeline of posts on a daily bases
+10.	Run post_daywise.py 
+	-	This reads post_with_count.csv and (In future will use combined post file having number of words)
+	-	creates post_daywise.csv
+11.	Run LIWC_daywise.py <LIWC category>
+	-	This reads post_daywise.csv and calculates the LIWC values on a day wise basis.
+	-	Generates daywise bar graph for the LIWC category in pdf
+	-	Creates <cateogory>_LIWC_daywise.csv file with the LIWC values for each day 
