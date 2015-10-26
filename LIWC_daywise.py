@@ -80,6 +80,8 @@ f = sum(fri)/count_fri
 s = sum(sat)/count_sat
 su = sum(sun)/count_sun
 value = [m, t, w, th, f, s, su]
+
+#create a pdf for the graph
 name = sys.argv[1] + "_daily.pdf"
 pp = PdfPages(name)
 fig, ax = plt.subplots()
