@@ -14,7 +14,7 @@ import pylab as pl
 # get all the posts number of words and time of all the posts
 colnames = ['hour' , 'post','num_words']
 
-posts = pandas.read_csv('post_daywise.csv' ,names=colnames)
+posts = pandas.read_csv('post_hour.csv' ,names=colnames)
 post_body = posts.post.tolist()
 num = posts.num_words.tolist()
 hour = posts.hour.tolist()
@@ -272,7 +272,7 @@ else:
     print "24"
     twe4_avg = 0
 
-value = [one_avg,two_avg, three_avg, four_avg, five_avg, six_avg, seven_avg, eight_avg, nine_avg, ten_avg, eleven_avg, twelve_avg, thirteen_avg, fourt_avg, fift_avg, sixt_avg, sevent_avg, eighteen_avg, ninet_avg, twe_avg, twe1_avg, twe2_avg, twe3_avg, twe4_avg]
+value = [twe4_avg,one_avg,two_avg, three_avg, four_avg, five_avg, six_avg, seven_avg, eight_avg, nine_avg, ten_avg, eleven_avg, twelve_avg, thirteen_avg, fourt_avg, fift_avg, sixt_avg, sevent_avg, eighteen_avg, ninet_avg, twe_avg, twe1_avg, twe2_avg, twe3_avg]
 
 name = sys.argv[1] + "_hourly.pdf"
 pp = PdfPages(name)
@@ -288,4 +288,4 @@ pp.close()
 name = sys.argv[1] +"LIWC_hourwise.csv"
 with open(name,"w") as f:
     writer = csv.writer(f)
-    writer.writerows(itertools.izip_longest(one,two, three, four, five, six, seven, eight, nine, ten, eleven , twelve, thirteen, fourt, fift, sixt, sevent,eighteen, ninet, twe, twe1, twe2, twe3, twe4, fillvalue=''))
+    writer.writerows(itertools.izip_longest(twe4,one,two, three, four, five, six, seven, eight, nine, ten, eleven , twelve, thirteen, fourt, fift, sixt, sevent,eighteen, ninet, twe, twe1, twe2, twe3, fillvalue=''))
