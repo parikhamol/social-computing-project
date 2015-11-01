@@ -36,9 +36,16 @@ This is the code for the social computing project at Gatech
 	-	This read post.csv and post1.csv (In the future will use the combined post.csv file)
 	-	Generates a timeline of posts on a daily bases
 10.	Run post_daywise.py 
-	-	This reads post_with_count.csv and (In future will use combined post file having number of words)
+	-	This reads post_with_counts.csv and (In future will use combined post file having number of words)
 	-	creates post_daywise.csv
-11.	Run LIWC_daywise.py <LIWC category>
+11.	Run LIWC_daywise.py (LIWC category)
 	-	This reads post_daywise.csv and calculates the LIWC values on a day wise basis.
-	-	Generates daywise bar graph for the LIWC category in pdf
-	-	Creates <cateogory>_LIWC_daywise.csv file with the LIWC values for each day 
+	-	Generates daywise bar graph for the LIWC category and creates (category)_daily.pdf
+	-	Creates (category)_LIWC_daywise.csv file with the LIWC values for each day 
+12. 	Run post_hour.py
+ 	-	This reads post_with_counts.csv and (In future will use combined post file having number of words_
+ 	-	creates post_hour.csv
+13. 	Run LIWC_hour.py (LIWC category)
+	-	This read post_hour.csv and calculates the LIWC values on an hour wise basis
+	-	Generates a hourwise bar graph for the LIWC category and creates (category)_hourly.pdf
+	-	Creates (category)_LIWC.hourwise.csv file with the LIWC values for each hour.
