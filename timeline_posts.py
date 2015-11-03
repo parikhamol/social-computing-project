@@ -30,7 +30,6 @@ timeline_sorted = OrderedDict(sorted(timeline.items()))
 #write the data to a csv file
 writer = csv.writer(open('timeline.csv', 'wb'))
 for key, value in timeline_sorted.items():
-    sum+=value
     writer.writerow([key, value])
 
 plt.bar(range(len(timeline)), timeline_sorted.values(), align='center')

@@ -39,7 +39,6 @@ def main(in_filename):
         #creating an array of all positive category values for each post and adding them
         #creating an array of all negative category values for each post and adding them
         a=outCountDict['positive_affect']
-        print item , a , "and ", num[index] ,"and " , a/float(num[index])
         all_postive_liwc_measures.append((outCountDict['positive_affect']  )/float(num[index]))
         all_negative_liwc_measures.append((outCountDict['negative_affect'])/float(num[index]))
         index = index + 1
@@ -48,7 +47,7 @@ def main(in_filename):
     # This is for all the reddit posts to get postid , positive and negative comments for each post
     if in_filename.find(str) >=0:
         colnames = ['postid' , 'Time' , 'Author','Nocomments', 'upvotes' , 'downvotes' , 'updown' ,'title', 'commenttext']
-        data = pandas.read_csv('combined_post.csv' ,names=colnames)
+        data = pandas.read_csv('combined_posts.csv' ,names=colnames)
         postid = list(data.postid)
         with open("combined_emotions_posts.csv","w") as f:
             writer = csv.writer(f)

@@ -14,7 +14,6 @@ num = posts.num_words.tolist()
 date_time = posts.time.tolist()
 
 a= datetime.datetime.strptime(date_time[1],"%m/%d/%Y %H:%M").time()
-print a.hour
 
 #convert the string to get just the date
 time =[]
@@ -25,7 +24,6 @@ hour =[]
 for i in range(len(time)):
     hour.append(time[i].hour)
 
-print hour
 
 with open("combined_post_hourly.csv","w") as f:
     writer = csv.writer(f)

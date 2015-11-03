@@ -92,7 +92,7 @@ plt.show()
 pp.close()
 
 #write a csv with the LIWC values for each day
-name = sys.argv[1] +"LIWC_daywise.csv"
+name = sys.argv[1] +"_LIWC_daywise.csv"
 with open(name,"w") as f:
     writer = csv.writer(f)
     writer.writerows(itertools.izip_longest(mon,tues,wed, thur, fri, sat, sun, fillvalue=''))

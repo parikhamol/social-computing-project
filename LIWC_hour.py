@@ -285,7 +285,7 @@ plt.show()
 pp.close()
 
 #write a csv with the LIWC values for each day
-name = sys.argv[1] +"LIWC_hourly.csv"
+name = sys.argv[1] +"_LIWC_hourly.csv"
 with open(name,"w") as f:
     writer = csv.writer(f)
     writer.writerows(itertools.izip_longest(twe4,one,two, three, four, five, six, seven, eight, nine, ten, eleven , twelve, thirteen, fourt, fift, sixt, sevent,eighteen, ninet, twe, twe1, twe2, twe3, fillvalue=''))
