@@ -58,8 +58,3 @@ This is the code for the social computing project at Gatech
 	-	This read combined_post_hourly.csv and calculates the LIWC values on an hour wise basis
 	-	Generates a hourwise bar graph for the LIWC category and creates (category)_hourly.pdf
 	-	Creates (category)_LIWC.hourly.csv file with the LIWC values for each hour.
-
-
-Pending
-
-Need to write a code that combines all the comments files in one file and remove duplicates
