@@ -6,8 +6,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 
 
 colnames = ['postid' , 'positive', 'negative']
-posts = pandas.read_csv("emotions_posts.csv",names=colnames)
-comments = pandas.read_csv("emotions_comments_unique.csv", names = colnames)
+posts = pandas.read_csv("combined_emotions_posts.csv",names=colnames)
+comments = pandas.read_csv("combined_emotions_comments_unique.csv", names = colnames)
 
 p_postid  =list(posts.postid)
 p_positive = list(posts.positive)

@@ -9,7 +9,7 @@ from itertools import izip
 # get the list of all the datetimes from the post.csv
 colnames = ['postid' , 'commentid','time', 'user','no1','no2','no3','comment']
 
-posts = pandas.read_csv('comments.csv' ,names=colnames)
+posts = pandas.read_csv('combined_comments.csv' ,names=colnames)
 post_id = posts.postid.tolist()
 commentid = posts.commentid.tolist()
 time = posts.time.tolist()
@@ -26,6 +26,6 @@ for i in range(len(comment)):
     number_words.append(len(str(comment[i]).split()))
 
 #create a new csv file with the number of words as a column
-with open("comments_with_counts.csv","w") as f:
+with open("combined_comments_with_counts.csv","w") as f:
     writer = csv.writer(f)
     writer.writerows(izip(post_id,commentid,time,user, no1, no2, no3,comment,number_words))

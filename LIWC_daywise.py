@@ -14,7 +14,7 @@ import pylab as pl
 # get all the posts number of words and time of all the posts
 colnames = ['day' , 'post','num_words']
 
-posts = pandas.read_csv('post_daywise.csv' ,names=colnames)
+posts = pandas.read_csv('combined_post_daywise.csv' ,names=colnames)
 post_body = posts.post.tolist()
 num = posts.num_words.tolist()
 day = posts.day.tolist()

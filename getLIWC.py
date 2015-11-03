@@ -48,24 +48,24 @@ def main(in_filename):
     # This is for all the reddit posts to get postid , positive and negative comments for each post
     if in_filename.find(str) >=0:
         colnames = ['postid' , 'Time' , 'Author','Nocomments', 'upvotes' , 'downvotes' , 'updown' ,'title', 'commenttext']
-        data = pandas.read_csv('post.csv' ,names=colnames)
+        data = pandas.read_csv('combined_post.csv' ,names=colnames)
         postid = list(data.postid)
-        with open("emotions_posts.csv","w") as f:
+        with open("combined_emotions_posts.csv","w") as f:
             writer = csv.writer(f)
             writer.writerows(izip(postid,all_postive_liwc_measures,all_negative_liwc_measures))
 
     # This is for all the reddit comments to get postid for each comment, positive and negative score for each comment
     else:
         colnames = ['postid' , ' commentid' , 'Time' , 'Author', 'upvotes' , 'downvotes' , 'updown' , 'commenttext']
-        data = pandas.read_csv('comments.csv' ,names=colnames)
+        data = pandas.read_csv('combined_comments.csv' ,names=colnames)
         postid = list(data.postid)
-        with open("emotions_comments.csv","w") as f:
+        with open("combined_emotions_comments.csv","w") as f:
             writer = csv.writer(f)
             writer.writerows(izip(postid,all_postive_liwc_measures,all_negative_liwc_measures))
 
         # Get the csv into lists get aggregate LIWC values for comments for each post
         colnames = ['postid' , 'positive' ,'negative']
-        data = pandas.read_csv("emotions_comments.csv", names=colnames)
+        data = pandas.read_csv("combined_emotions_comments.csv", names=colnames)
         postid= list(data.postid)
         positive = list(data.positive)
         negative = list(data.negative)
@@ -103,7 +103,7 @@ def main(in_filename):
             p1 = p1 + 1
 
         #write the average positive and negative LIWC values for all comments of a post into a CSV file
-        with open("emotions_comments_unique.csv","w") as f:
+        with open("combined_emotions_comments_unique.csv","w") as f:
             writer = csv.writer(f)
             writer.writerows(izip(unique_postid,positive_unique_postid,negative_unique_postid))
 

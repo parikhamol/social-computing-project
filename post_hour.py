@@ -8,7 +8,7 @@ from itertools import izip
 # get all the posts number of words and time of all the posts
 colnames = ['postid' , 'time', 'user','no1','no2','no3','n04' ,'title','post','num_words']
 
-posts = pandas.read_csv('post_with_counts.csv' ,names=colnames)
+posts = pandas.read_csv('combined_post_with_counts.csv' ,names=colnames)
 post_body = posts.post.tolist()
 num = posts.num_words.tolist()
 date_time = posts.time.tolist()
@@ -27,6 +27,6 @@ for i in range(len(time)):
 
 print hour
 
-with open("post_hour.csv","w") as f:
+with open("combined_post_hourly.csv","w") as f:
     writer = csv.writer(f)
     writer.writerows(izip(hour,post_body,num))

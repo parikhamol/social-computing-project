@@ -14,7 +14,7 @@ import pylab as pl
 # get all the posts number of words and time of all the posts
 colnames = ['hour' , 'post','num_words']
 
-posts = pandas.read_csv('post_hour.csv' ,names=colnames)
+posts = pandas.read_csv('combined_post_hourly.csv' ,names=colnames)
 post_body = posts.post.tolist()
 num = posts.num_words.tolist()
 hour = posts.hour.tolist()
@@ -285,7 +285,7 @@ plt.show()
 pp.close()
 
 #write a csv with the LIWC values for each day
-name = sys.argv[1] +"LIWC_hourwise.csv"
+name = sys.argv[1] +"LIWC_hourly.csv"
 with open(name,"w") as f:
     writer = csv.writer(f)
     writer.writerows(itertools.izip_longest(twe4,one,two, three, four, five, six, seven, eight, nine, ten, eleven , twelve, thirteen, fourt, fift, sixt, sevent,eighteen, ninet, twe, twe1, twe2, twe3, fillvalue=''))

@@ -9,24 +9,13 @@ from collections import OrderedDict
 # get the list of all the datetimes from the post.csv
 colnames = ['postid' , 'time', 'user','no1','no2','no3','n04' ,'title','post']
 
-posts = pandas.read_csv('post.csv' ,names=colnames)
+posts = pandas.read_csv('combined_posts.csv' ,names=colnames)
 date_time = posts.time.tolist()
 
 #convert the string to date format of python
 time =[]
 for i in range(len(date_time)):
     time.append(datetime.datetime.strptime(date_time[i], "%m/%d/%Y %H:%M").date())
-
-#need to get the post1.csv
-# get the list of all the datetimes from post1.csv
-posts = pandas.read_csv('post1.csv' ,names=colnames)
-date_time = posts.time.tolist()
-
-
-#convert the string to date format of python
-for i in range(len(date_time)):
-    time.append(datetime.datetime.strptime(date_time[i], "%m/%d/%Y %H:%M").date())
-
 
 #create a dictionary of unique dates
 timeline = {}
