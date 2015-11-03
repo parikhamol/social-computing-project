@@ -24,8 +24,8 @@ def extract_liwc_features():
 
 	liwc_lexicons["anger"] = get_liwc_lexicons("anger")
 	liwc_lexicons["anxiety"] = get_liwc_lexicons("anxiety")
-	liwc_lexicons["sadness"] = get_liwc_lexicons("sadness")
-	liwc_lexicons["swear"] = get_liwc_lexicons("swear")
+	liwc_lexicons["preposition"] = get_liwc_lexicons("preposition")
+	liwc_lexicons["article"] = get_liwc_lexicons("article")
 
 	liwc_lexicons["cognitive_mech"] = get_liwc_lexicons("cognitive_mech")
 	liwc_lexicons["discrepancies"] = get_liwc_lexicons("discrepancies")
@@ -51,7 +51,7 @@ def extract_liwc_features():
 	liwc_lexicons["present_tense"] = get_liwc_lexicons("present_tense")
 	liwc_lexicons["future_tense"] = get_liwc_lexicons("future_tense")
 
-	liwc_lexicons["family"] = get_liwc_lexicons("family")
+	liwc_lexicons["conjunction"] = get_liwc_lexicons("conjunction")
 	liwc_lexicons["friends"] = get_liwc_lexicons("friends")
 	liwc_lexicons["social"] = get_liwc_lexicons("social")
 	liwc_lexicons["work"] = get_liwc_lexicons("work")
