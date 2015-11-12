@@ -27,7 +27,7 @@ def extract_liwc_features():
 	liwc_lexicons["preposition"] = get_liwc_lexicons("preposition")
 	liwc_lexicons["article"] = get_liwc_lexicons("article")
 
-	liwc_lexicons["cognitive_mech"] = get_liwc_lexicons("cognitive_mech")
+	liwc_lexicons["pronoun"] = get_liwc_lexicons("pronoun")
 	liwc_lexicons["discrepancies"] = get_liwc_lexicons("discrepancies")
 	liwc_lexicons["inhibition"] = get_liwc_lexicons("inhibition")
 	liwc_lexicons["negation"] = get_liwc_lexicons("negation")
@@ -63,7 +63,7 @@ def extract_liwc_features():
 	liwc_lexicons["money"] = get_liwc_lexicons("money")
 	liwc_lexicons["achievement"] = get_liwc_lexicons("achievement")
 	liwc_lexicons["home"] = get_liwc_lexicons("home")
-	liwc_lexicons["sexual"] = get_liwc_lexicons("sexual")
+	liwc_lexicons["sadness"] = get_liwc_lexicons("sadness")
 
 	liwc_lexicons["first_person_singular"] = get_liwc_lexicons("first_person_singular")
 	liwc_lexicons["first_person_plural"] = get_liwc_lexicons("first_person_plural")
