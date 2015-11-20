@@ -63,3 +63,5 @@ This is the code for the social computing project at Gatech
 	-	This read combined_post_hourly.csv and calculates the LIWC values on an hour wise basis
 	-	Generates a hourwise bar graph for the LIWC category and creates (category)_hourly.pdf
 	-	Creates (category)_LIWC.hourly.csv file with the LIWC values for each hour.
+16. Run LDA.py
+	-	This read combined_posts.py and combined_comments.py and prints out the topics 
