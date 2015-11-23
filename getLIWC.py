@@ -26,6 +26,7 @@ def main(in_filename):
         comments = pandas.read_csv(sys.argv[1],names=colnames)
         num = comments.now.tolist()
         doc = comments.comment.tolist()
+        id = comments.commentid.tolist()
 
     index =0
     all_postive_liwc_measures = []
@@ -39,10 +40,13 @@ def main(in_filename):
         #creating an array of all positive category values for each post and adding them
         #creating an array of all negative category values for each post and adding them
         a=outCountDict['positive_affect']
-        all_postive_liwc_measures.append((outCountDict['positive_affect']  )/float(num[index]))
-        all_negative_liwc_measures.append((outCountDict['negative_affect'])/float(num[index]))
-        index = index + 1
 
+        if (((outCountDict['article'])+(outCountDict['preposition']) + (outCountDict['pronoun'])+ (outCountDict['conjunction'])+ (outCountDict['adverbs'])+ (outCountDict['negation'])+(outCountDict['auxiliary_verbs'])) /float(num[index])) > 1:
+            all_postive_liwc_measures.append(1.0)
+        else:
+            all_postive_liwc_measures.append(((outCountDict['article'])+(outCountDict['preposition']) + (outCountDict['pronoun'])+ (outCountDict['conjunction'])+ (outCountDict['adverbs'])+ (outCountDict['negation'])+(outCountDict['auxiliary_verbs'])) /float(num[index]))
+        all_negative_liwc_measures.append((outCountDict['pronoun'] )/float(num[index]))
+        index = index + 1
 
     # This is for all the reddit posts to get postid , positive and negative comments for each post
     if in_filename.find(str) >=0:
