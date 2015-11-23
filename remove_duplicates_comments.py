@@ -39,7 +39,7 @@ for i in range(0,len(post_id)):
         counter+=1
         continue
     else:
-        d[post_id[i]] = i
+        d[comment_id[i]] = i
         new_post_id.append(post_id[i])
         new_time.append(time[i])
         new_user.append(user[i])
