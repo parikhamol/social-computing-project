@@ -1,0 +1,14 @@
+Agenda of the project
+
+	1)	Get a list of unique users from the combined_posts.csv. 
+	⁃	This will help us get a list of users till date
+	⁃	Create a dictionary of that and write to a file
+	2)	Now read a new post.csv file and list of unique user and append any users that are new to the list
+	⁃	Append new users to the unique user list
+	⁃	Write the new list back to the same file
+	3)	Use the reddit user crawl script to get the timelines of each of the unique users and store them in a file user_timelines.csv
+	⁃	Start this with just the list of unique users that was create from combined_posts.csv
+	⁃	Get the list of users that was added from the new post.csv file and crawl those timelines
+	⁃	Get the posts of those new users and append them to this user_timelines.csv
+
+	
