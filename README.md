@@ -4,14 +4,14 @@ This is the code for the social computing project at Gatech
 1.	Run sed 1p post*.csv > merged.csv 
 	-  	This combines all the posts file into a single csv merged.csv
 
-2.  Run remove_duplicates_posts.csv
+2.  Run remove_duplicates_posts.py
     -   This reads merge.csv and removes duplicates
     -  	Generates combined_posts.csv
 	
 3. 	Run sed1p comments*.csv >merged.csv
     - 	This combines all the comments into a single merged.csv
 
-4. 	Run remove_duplicates_comments.csv
+4. 	Run remove_duplicates_comments.py
     - 	This reads merge.csv and removed duplicates
     - 	Generates combined_comment.csv
 
